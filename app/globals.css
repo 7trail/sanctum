@@ -1,21 +1,99 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.text-input {
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  margin: auto;
+  width: 90%;
+  font-size: 18px;
+}
+
+.flex-spread {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.flex-left {
+  display: flex;
+  align-items: end;
+  gap: 15px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.inputs input[type="text"], .inputs input[type="password"]{
+  font-size: 16px;
+  min-width: 240px;
+}
+
+.message-list {
+  overflow-y: scroll;
+  max-height: calc(100vh - 148px);
+}
+
+/* On alternating values */
+
+/*.message-list > *:nth-child(even) {
+  color: white;
+  background-color: #555;
+  border-radius: 10px;
+}*/
+
+.message {
+  padding-top: 0px;
+  padding-left: 10px;
+}
+
+.message .show-header {
+  margin-top: 16px;
+}
+
+.message .title-line, .message .title-line * {
+  margin-bottom: 2px;
+  margin-top: 16px;
+}
+
+.message-text {
+  margin-top: 2px;
+  margin-bottom: 0;
+  padding-left: 32px;
+}
+
+.hide-header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sender {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.timestamp {
+  font-size: 14px;
 }
