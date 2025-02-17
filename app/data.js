@@ -28,7 +28,7 @@ export async function SendMessage(sender, text, key_tag) {
         },
         timestamp: new Date()
     });
-    if (messages.length > 4) {
+    if (messages.length > 500) {
         messages.shift();
     }
     return;
